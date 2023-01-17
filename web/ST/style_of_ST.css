@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.shell{
+    height:100vh;
+    overflow-x:hidden;
+    perspective:3px;
+}
+
+.shell div{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.image{
+    transform: translateZ(-1px) scale(1.6);
+    background-size:cover;
+    height:90vh;
+    z-index: -1;
+}
+
+.text{
+    height:50vh;
+    background-color: #000;
+}
+
+.text h4{
+    color: #fff;
+    font-size:30px;
+}
+.heading h1{
+    color: #e8a72d;
+}
+
+.heading{
+    z-index:-1;
+    transform: translateY(-30vh) translateZ(1px);
+    color:#fff;
+    font-size: 30px;
+}
+
+/*最后回到首页的设计*/
+a {
+    text-decoration: none;
+    color: #f81f3a;
+}
+
+a:hover{
+    letter-spacing: 4px;
+    box-shadow: 0 0 35px #142ade;
+
+}
+
+/*每个page的不同颜色的配置*/
+.heading:nth-of-type(2) span{
+    font-weight:bold;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.heading:nth-of-type(5) span{
+    font-weight:bold;
+    color: #bb3232;
+    font-size: 18px;
+}
+
+.heading:nth-of-type(8) span{
+    font-weight:bold;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.heading:nth-of-type(11) span{
+    font-weight:bold;
+    color: #142ade;
+    font-size: 24px;
+}
+
+.heading:nth-of-type(14) span{
+    font-weight:bold;
+    color: #142ade;
+    font-size: 24px;
+}
+
+.heading:nth-of-type(17) span{
+    font-weight:bold;
+    color: #142ade;
+    font-size: 20px;
+}
+
+/*对新闻部的图片的修整*/
+#news{
+    transform: translateZ(-1px) scale(1.6);
+    background-size:50% 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:90vh;
+    z-index: -1;
+    background-color:#000;
+}
+
+/*对论坛图片的修正*/
+#column{
+    transform: translateZ(-1px) scale(1.6);
+    background-size:50% 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:90vh;
+    z-index: -1;
+    background-color:#000;
+}
+
+#teacher{
+    transform: translateZ(-1px) scale(1.6);
+    background-size:50% 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:90vh;
+    z-index: -1;
+    background-color:#000;
+}

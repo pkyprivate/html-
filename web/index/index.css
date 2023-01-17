@@ -1,0 +1,156 @@
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.top {
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
+     z-index: 999;
+     height: 50px;
+     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    margin-top: 9px;
+}
+
+.logo a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(1.jpg);
+    background-size: 32px 32px;
+    }
+
+.nav {
+     float: right;
+     margin-top: 10px;
+     font-size: 0
+ }
+
+.nav li {
+         display: inline-block;
+         margin-left: 40px;
+}
+
+.nav a {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        color: #fff;
+        text-decoration: none;
+ }
+
+.nav a:hover { color: #83c3f3;}
+/*以上为导航栏部分*/
+.section {
+         text-align: center;
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+         background-size: cover;
+         overflow: hidden;
+}
+
+#section0 { 
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    height: 1200px;
+    width: 100%; 
+    background-image: url(html/photo1.jpg);
+    transition:1000ms;
+}
+
+#section1 { 
+    z-index: 1;
+    position: absolute;
+    top:1200px;
+    height: 1200px;
+    width: 100%; 
+    background-image: url(html/photo2.jpg);
+    transition:1000ms;
+}
+
+#section2 { 
+    z-index: 2;
+    position: absolute;
+    top: 1200px;
+    height: 1200px;
+    width: 100%; 
+    background-image: url(html/photo3.jpg);
+    transition:1000ms;
+}
+
+#section3 { 
+    z-index: 3;
+    position: absolute;
+    top: 1200px;
+    height: 1200px;
+    width: 100%; 
+    background-image: url(html/photo4.jpg);
+    transition:1000ms;
+
+}
+
+.title1 {
+    opacity: 0.8;
+    font-size: 60px;
+    line-height: 93px;
+    background:  no-repeat center bottom; 
+}
+.title2 {
+    opacity: 0.8;
+    font-size: 40px;
+    line-height: 75px;
+}
+.title3 {
+    font-size: 24px;
+    font-family: 'PingFang-SC-UltraLight', '微软雅黑', '宋体';
+    line-height: 48px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+#section0{ color:#00C9A7; }
+#section1 .title1 { color: #000000; opacity: 1;}
+#section1 .title2,#section1 .title3{color:#fff;}
+#section2 .title1, #section2 .title2, #section2 .title3{color:#fff;opacity:1;}
+
+#section3 .title1 ,#section3 .title2{ color: #C0C0C0;}
+#section3 .title3{ color: #cb3a56;}
+/*以上为滚动屏幕部分*/
+.DownloadBtn {
+         cursor: pointer;
+         margin: 85px auto 0;
+         width: 220px; height:
+         50px; position: relative;
+         background: #fff;
+         color: #fff;
+         line-height: 50px;
+         font-size: 24px;
+         border-radius: 25px;}
+
+.DownloadBtn a {
+         display:inline-block;
+         width: 100%;
+         height: 100%;
+         color: #000;
+         font-family: 'PingFang-SC-UltraLight', '微软雅黑', '宋体';
+         text-decoration: none;
+}
+/*以上为按钮部分*/

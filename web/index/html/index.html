@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>www.casellcollege-index</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<div class="top">
+    <div class="menu">
+        <ul class="nav">
+            <li><a href="index.html">学院首页</a></li>
+            <li><a href="../../OA/html/Outstanding_Alumni.html">杰出校友</a></li>
+            <li><a href="../../ST/html/Sections&Teachers.html">学院部门</a></li>
+            <li><a href="../../言灵图鉴/html/yanling.html">言灵图鉴与龙族谱系</a></li>
+        </ul>
+    </div>
+</div>
+<div id="fullpage">
+    <div class="section" id="section0">
+        <br><br><br><br>
+        <br><br><br><br>
+        <div class="title1">美国境内 私立大学</div>
+        <div class="title2">联邦教育部官方认证</div>
+        <div class="title3">坐落于美国伊利诺伊州芝加哥
+            <br>芝加哥大学联谊院校</div>
+
+    </div>
+    <div class="section" id="section1">
+        <div class="title1"></div>
+        <br><br><br><br>
+        <br><br><br><br>
+        <div class="title2">欧洲混血种组织“秘党”成立的屠龙专业学校</div>
+        <div class="title3">德国屠龙世家“卡塞尔”的姓氏命名</div>
+
+    </div>
+    <div class="section" id="section2">
+        <br><br><br><br><br><br>
+        <div class="title1">课程丰富多样</div>
+        <div class="title2">但！&nbsp &nbsp <strong>只为屠龙</strong></div>
+        <div class="title3">《魔动机械设计学》，《炼金化学》，《言灵学》，《古诺尔斯语》，《太极拳》，《龙族家族谱系》等</div>
+    </div>
+    <div class="section" id="section3">
+        <br><br><br><br>
+        <div class="title1">混血种，请加入我们</div>
+        <div class="title2">进入这血与火的世界</div>
+        <div class="title3" id="talk"><strong>凡王之血
+            <br>必以剑终</strong></div>
+        <div class="DownloadBtn"><a href="http://localhost:8083/web001_war_exploded/index.jsp" target="_blank">申请入学</a></div>
+    </div>
+</div>
+<script>
+    let section=document.querySelectorAll('.section');
+    let index=0;
+    function getMouseY(event){
+        let e=event||window.event;
+        return e.screenY;
+    }
+    window.addEventListener('scroll',function(){
+        if(window.innerHeight+document.documentElement.scrollTop>=1200){
+            document.documentElement.scrollTop=1200-window.innerHeight;
+        }
+    })
+    window.addEventListener('click',function(e){
+        let y=getMouseY(e);
+        //下半区
+        if(y>=600){
+            if(index!=3){
+                section[index+1].style.top=0;
+                    console.log(1);
+
+                    section[index].style.top='-1200px';
+
+                index++;
+            }
+        }
+        //上半区
+        else{
+            if(index!=0){
+                section[index-1].style.top=0;
+ 
+                    section[index].style.top='1200px';
+                index--;
+            }
+        }
+    })
+    // window.addEventListener('scroll', function () {
+    //     for(let i=0;i<section.length;i++){
+    //         if (document.documentElement.scrollTop >100&&document.documentElement.scrollTop<300){
+    //             document.documentElement.scrollTop=800;
+    //             section[1].style.top='800px';
+    //         }
+    //         else if(document.documentElement.scrollTop<600 &&document.documentElement.scrollTop>300){
+    //             section[1].style.top='1200px';
+    //             document.documentElement.scrollTop=0;
+    //         }
+    //         if (document.documentElement.scrollTop >900&&document.documentElement.scrollTop<1100){
+    //             document.documentElement.scrollTop=1600;
+    //             section[2].style.top='1600px';
+    //         }
+    //         else if(document.documentElement.scrollTop<1500 &&document.documentElement.scrollTop>1300){
+    //             section[2].style.top='1714px';
+    //             document.documentElement.scrollTop=800;
+    //         }
+    //         if (document.documentElement.scrollTop >1800&&document.documentElement.scrollTop<1900){
+    //             document.documentElement.scrollTop=2200;
+    //             section[3].style.top='2200px';
+    //         }
+    //         else if(document.documentElement.scrollTop<2100 &&document.documentElement.scrollTop>2000){
+    //             section[3].style.top='2800px';
+    //             document.documentElement.scrollTop=1714;
+    //         }
+
+    //     }
+    //     })
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>言灵图鉴&龙族谱系</title>
+    <link rel="stylesheet" href="../yanling.css">
+</head>
+
+<body>
+<div class="shell">
+    <div class="box">
+        <div class="images">
+            <img src="photo1.jpg">
+        </div>
+        <div class="content">
+            <p class="introdection" id ="1">天空与风之王<br>风系言灵<br>
+                灭世言灵为言灵·尘息风蛇。衍生出其余风属性言灵为言灵·镰鼬，言灵·无尘之地，言灵·阴流等
+            </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="images">
+            <img src="photo2.jpg">
+        </div>
+        <div class="content">
+            <p class="introdection" id ="2">青铜与火之王<br>火系言灵<br>
+                灭世言灵为言灵·烛龙。衍生出其余火属性言灵为言灵·炽日，言灵·君炎，言灵·莱茵等
+            </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="images">
+            <img src="photo3.jpg">
+        </div>
+        <div class="content">
+            <p class="introdection" id ="3">海洋与水之王<br>水系言灵<br>
+                灭世言灵为言灵·涛海怒啸，衍生出其余水属性言灵为言灵·涡流，言灵·冰，言灵·影弑等
+            </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="images">
+            <img src="photo4.jpg">
+        </div>
+        <div class="content">
+            <p class="introdection" id ="4">大地与山之王<br>土系言灵<br>
+                灭世言灵为言灵·湿婆业舞，衍生出其余土属性言灵为言灵·剑御，言灵·王权，言灵·分山等
+            </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="images">
+            <img src="photo5.jpg">
+        </div>
+        <div class="content">
+            <p class="introdection" id ="5">白王伊邪那美<br>精神系言灵<br>
+                黑王诞生的叛徒，产生精神言灵一系，精神被称为第五元素。目前已知有：言灵·推演，言灵·催眠，言灵·冥照等。
+                危险系数均较高。
+            </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="images">
+            <img src="photo6.jpg">
+        </div>
+        <div class="content">
+            <p class="introdection" id ="6">黑王尼德霍格<br>黑王专属言灵<br>
+                分为律令类与共鸣类，目前已知有：言灵·皇帝，言灵·戒律，言灵·钥匙等，随着黑王的死去无人可用。
+            </p>
+        </div>
+    </div>
+<!-- //href=""  -->
+    <div id="break"> &nbsp</div>
+<!--正常显示内容-->
+    <div class="box" id="A">
+        <div class="images">
+            <img class="pic", src="lucky.jpg">
+        </div>
+        <div class="content1">
+            <p class="introdection" id ="0"><br><br>
+            </p>
+        </div>
+    </div>
+
+    <div class="Btn"><a href="../../index/html/index.html" target="_blank">返回首页</a></div>
+</div>
+<script>
+    let img=document.querySelector('.pic');
+    let agree_scroll=0;
+    let blank=document.querySelector('#A')
+
+    //document.querySelector('.box#one');
+    function random(min,max){
+    return Math.floor(Math.random()*(max-min))+min;
+    }
+    function calc(dom, distance) {
+      		distance = distance || 0
+           if (['relative','absolute','fixed'].includes(getComputedStyle(dom).position)) {
+             distance += distance.offsetTop
+           }
+           if (dom.parentElement.nodeName === 'BODY' || !dom.parentElement) {
+                return distance
+           }
+           return calc(dom.parentElement, distance)
+        }
+    let btn=document.querySelector('.DownloadBtn');
+    let photo_i;
+    let now_photo=0;
+    let now_index=0;
+    blank.addEventListener('click',function(){
+        agree_scroll++;
+        // if(agree_scroll==1){
+        //     box.style.top='0px'
+        // }
+        photo_i=random(1,5);
+        img.src='photo'+photo_i+'.jpg';
+        now_index=random(1,5);
+        now_photo=photo_i;
+    })
+    blank.addEventListener('mouseenter',function(){
+        if(agree_scroll>0){      
+            img.src=(now_photo-1)*4+now_index+'.jpg';
+        }
+    })
+    blank.addEventListener('mouseleave',function(){
+        if(agree_scroll>0){      
+            img.src='photo'+now_photo+'.jpg';
+        }
+    })
+    //var div = document.querySelector('#box')
+
+  //最终结果
+  //let distance = div.offsetTop + calc(div.parentElement)
+
+
+</script>
+</body>
+
+</html>
